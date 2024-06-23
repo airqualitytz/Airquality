@@ -15,7 +15,7 @@ header {
     top: 0;
     z-index: 1000;
     color: #ffffff;
-    padding: 1em 0;
+    padding: 0.5em 0; /* Reduced padding for large screens */
     text-align: center;
     background: url('https://images.pexels.com/photos/257775/pexels-photo-257775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center / cover;
 }
@@ -32,11 +32,25 @@ header::before {
     pointer-events: none;
     opacity: 1; /* Ensures the pseudo-element itself is fully visible */
 }
+
 header .logo {
     display: inline-block;
     font-size: 1.5em;
     font-weight: bold;
 }
+
+@media (max-width: 768px) and (orientation: portrait) {
+    header {
+        padding: 1em 0; /* Increased padding for small screens in portrait mode */
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    header {
+        padding: 0.5em 0; /* Reduced padding for small screens in landscape mode */
+    }
+}
+
 
 .nav-container {
     position: relative;
@@ -135,17 +149,6 @@ nav ul li a:hover {
     nav ul li a {
         padding: 10px 20px;
     }
-
-    /* Hide nav ul when a section is targeted */
-    #menu-toggle:not(:checked) + label + nav ul {
-        right: -250px;
-        display: none;
-    }
-
-    /* Show the menu button when a section is targeted */
-    #menu-toggle:not(:checked) + label {
-        display: block;
-    }
 }
 
 @media (min-width: 769px) {
@@ -158,29 +161,20 @@ nav ul li a:hover {
     }
 }
 
-/* Hide nav ul when a section is targeted */
-#menu-toggle:checked + label + nav ul li a:target {
+#menu-toggle:checked + .menu-btn {
     display: none;
 }
 
-/* Make sure the navigation closes when a section is targeted */
-nav ul li a:target ~ #menu-toggle:checked {
-    display: none;
-}
-
-/* Extra styling to adjust menu button */
-nav ul li a:target ~ .menu-btn {
+#menu-toggle:checked + .menu-btn + nav ul .close-btn {
     display: block;
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    border: none;
-    font-size: 18px;
-    z-index: 2;
+}
+
+nav ul li a {
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
 }
 
 
