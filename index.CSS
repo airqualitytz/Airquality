@@ -38,90 +38,67 @@ header .logo {
     font-weight: bold;
 }
 
-/* Import Nunito font */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
-
-/* Base styles for the navigation */
-nav ul {
+/* Base styles for navigation */
+nav {
+    position: relative;
+    background: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav ul {
     list-style: none;
-    margin: 0;
     padding: 0;
-    font-family: 'Nunito', sans-serif;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 1em;
-}
-
-nav ul li a {
-    color: #ffffff; /* Font color set to white */
+    margin: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
     text-decoration: none;
-    font-size: 1em;
-}
-
-/* Styles for small devices (max-width: 576px) */
-@media (max-width: 576px) {
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul li {
-        display: none;
-        margin: 0.5em 0;
-    }
-
-    nav ul li:first-child {
-        display: block; /* Show Home */
-    }
-
-    /* Expand button */
+    color: #333;
+    padding: 8px 16px;
+    display: block;
+  }
+  
+  /* Hide the checkbox */
+  #nav-toggle {
+    display: none;
+  }
+  
+  /* Toggle button styles */
+  nav label {
+    display: none;
+    background: #333;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Show toggle button on small screens */
+  @media (max-width: 768px) {
     nav label {
-        display: block;
-        font-size: 1.5em;
-        color: #ffffff; /* Font color set to white */
-        cursor: pointer;
-        margin-bottom: 0.5em;
-        padding: 0.2em 0.5em;
-        border-radius: 5px;
-        border: none;
+      display: block;
     }
-
-    /* Show all menu items when checkbox is checked */
-    #nav-toggle:checked + ul li {
-        display: block;
-    }
-
-    /* Hide checkbox */
-    #nav-toggle {
-        display: none;
-    }
-
-    /* Ensure no overlap */
-    nav {
-        position: relative;
-        z-index: 1;
-    }
-
+  
     nav ul {
-        padding: 1em;
-        width: 100%;
+      display: none;
+      flex-direction: column;
     }
-
-    nav ul li a {
-        display: block;
-        padding: 0.5em 0;
-        width: 100%;
+  
+    nav ul li {
+      margin: 10px 0;
     }
-}
-
-/* Extra styles for better visuals (optional) */
-nav ul {
-    padding: 1em;
-}
-
+  
+    #nav-toggle:checked + ul {
+      display: flex;
+    }
+  }
+  
 
 section {
     padding: 4em 1em 2em;
