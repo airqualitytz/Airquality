@@ -978,6 +978,14 @@ button:hover {
     body {
         font-size: 15px;
     }
+
+    .title-text {
+        font-size: 1.8em; /* Adjust based on your design */
+    }
+
+    .description-text {
+        font-size: 1.2em; /* Adjust based on your design */
+    }
 }
 
 @media (max-width: 992px) {
@@ -991,6 +999,14 @@ button:hover {
 
     .header, .main, .footer {
         padding: 15px;
+    }
+
+    .title-text {
+        font-size: 1.6em; /* Adjust based on your design */
+    }
+
+    .description-text {
+        font-size: 1.1em; /* Adjust based on your design */
     }
 
     /* Example of adapting images */
@@ -1016,6 +1032,14 @@ button:hover {
     .header, .main, .footer {
         padding: 10px;
     }
+
+    .title-text {
+        font-size: 1.4em; /* Adjust based on your design */
+    }
+
+    .description-text {
+        font-size: 1em; /* Adjust based on your design */
+    }
 }
 
 @media (max-width: 576px) {
@@ -1025,5 +1049,13 @@ button:hover {
 
     .header, .main, .footer {
         padding: 5px;
+    }
+
+    .title-text {
+        font-size: 1.2em; /* Adjust based on your design */
+    }
+
+    .description-text {
+        font-size: 0.9em; /* Adjust based on your design */
     }
 }
