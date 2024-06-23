@@ -96,7 +96,7 @@ nav ul li a:hover {
 
 @media (max-width: 768px) {
     nav {
-        background-color: #333;
+        background-color:  #a4cc36;
     }
 
     nav ul {
@@ -107,7 +107,7 @@ nav ul li a:hover {
         right: -250px;
         width: 250px;
         height: 100%;
-        background-color: #333;
+        background-color:  #a4cc36;
         transition: right 0.3s;
     }
 
@@ -121,7 +121,7 @@ nav ul li a:hover {
         position: fixed;
         top: 15px;
         left: 15px;
-        background-color: #333;
+        background-color:  #a4cc36;
         color: white;
         padding: 10px;
         cursor: pointer;
@@ -175,6 +175,27 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #555;
+}
+
+/* Ensure the menu closes when a link is clicked */
+nav ul li a {
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Hide the menu when a link is clicked */
+nav ul li a:active ~ #menu-toggle {
+    display: none;
+    right: -250px;
+}
+
+/* Automatically close the menu when a target is clicked */
+nav ul li a:active + ul {
+    right: -250px;
+    display: none;
 }
 
 
@@ -428,7 +449,7 @@ h2 {
 
 .team-member-description {
     padding: 20px;
-    background-color: #0a3069;
+    background-color:#003366;
     border-top: 2px solid #fff;
     text-align: center;
 }
@@ -498,7 +519,7 @@ h2 {
 }
 
 .article-item a:hover {
-    color: #002244;
+    color: #003366;
     text-decoration: underline;
 }
 
@@ -600,7 +621,7 @@ footer {
 }
 
 #about h2 span {
-    color: #a4cc36;
+    color:  #a4cc36;
 }
 
 #about p {
@@ -635,7 +656,7 @@ footer {
 }
 
 .contact-details h2, .quick-enquiry h2 {
-    color: #005b9e;
+    color: #003366;
     margin-bottom: 10px;
 }
 
@@ -645,7 +666,7 @@ footer {
 }
 
 .contact-details .office h3 {
-    color: #005b9e;
+    color: #003366;
     margin-bottom: 5px;
 }
 
@@ -691,7 +712,7 @@ footer {
 .quick-enquiry form button {
     margin-top: 20px;
     padding: 10px;
-    background-color: #005b9e;
+    background-color: #003366;
     color: #ffffff;
     border: none;
     border-radius: 4px;
@@ -699,7 +720,7 @@ footer {
 }
 
 .quick-enquiry form button:hover {
-    background-color: #004080;
+    background-color: #003366;
 }
 
 #air-quality-assessment-container {
@@ -707,7 +728,7 @@ footer {
     justify-content: center;
     align-items: center;
     min-height: 40vh;
-    background-color: #042d4b; /* Dark background color */
+    background-color: #003366; /* Dark background color */
 }
 
 #air-quality-assessment {
@@ -768,7 +789,7 @@ button {
 }
 
 button:hover {
-    background-color: #00bfa5;
+    background-color:  #a4cc36;
 }
 
 #submit-section {
@@ -788,7 +809,7 @@ button:hover {
 
 .radio-option input {
     margin-right: 10px;
-    accent-color: #00e676;
+    accent-color: #a4cc36;
 }
 
 .radio-option label {
@@ -801,7 +822,7 @@ button:hover {
 }
 
 #services {
-    background-color: #173658;
+    background-color: #003366;
     padding: 50px 20px;
     font-family: 'Arial', sans-serif;
     color: #fff;
@@ -841,11 +862,11 @@ button:hover {
 }
 
 .service-item h3 {
-    color: #0056b3;
+    color: #003366;
     font-size: 1.8em;
     margin-bottom: 15px;
     font-family: 'Georgia', serif;
-    border-bottom: 2px solid #007BFF;
+    border-bottom: 2px solid #003366;
     padding-bottom: 5px;
 }
 
@@ -880,11 +901,11 @@ button:hover {
 
 .service-item ul li:hover {
     background: #d0e0fc;
-    border-color: #007BFF;
+    border-color: #003366;
 }
 
 .service-item ul li strong {
-    color: #0056b3;
+    color:#003366;
 }
 
 /* Scrollbar styling */
@@ -893,12 +914,12 @@ button:hover {
 }
 
 .service-list::-webkit-scrollbar-thumb {
-    background: #0056b3;
+    background: #003366;
     border-radius: 10px;
 }
 
 .service-list::-webkit-scrollbar-track {
-    background: #007BFF;
+    background: #003366;
 }
 
 /* Responsive Design */
@@ -919,7 +940,7 @@ button:hover {
 
 #odour-assessment h2 {
     font-size: 2.5em;
-    color: #007BFF;
+    color: #003366;
     margin-bottom: 40px;
 }
 
@@ -961,7 +982,7 @@ button:hover {
 }
 
 .odour-service h3 {
-    color: #0056b3;
+    color: #003366;
     font-size: 1.5em;
     margin-top: 15px;
     margin-bottom: 10px;
@@ -996,7 +1017,7 @@ button:hover {
 }
 
 #clients h2 span {
-    color: #27ae60;
+    color: #a4cc36;
 }
 
 .client-gallery {
@@ -1090,7 +1111,7 @@ button:hover {
 .plant h3 {
     font-family: 'Arial', sans-serif;
     font-size: 1.5em;
-    color: #27ae60;
+    color:  #a4cc36;
     margin-bottom: 10px;
 }
 
