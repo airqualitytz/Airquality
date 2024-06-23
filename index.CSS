@@ -135,6 +135,17 @@ nav ul li a:hover {
     nav ul li a {
         padding: 10px 20px;
     }
+
+    /* Hide nav when a section is targeted */
+    section:target ~ .nav-container nav ul {
+        right: -250px;
+        display: none;
+    }
+
+    /* Always show the menu button */
+    section:target ~ .nav-container .menu-btn {
+        display: block;
+    }
 }
 
 @media (min-width: 769px) {
