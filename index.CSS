@@ -38,21 +38,113 @@ header .logo {
     font-weight: bold;
 }
 
+.nav-container {
+    position: relative;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+}
+
 nav ul {
-    list-style: none;
+    list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 1em;
+    flex: 1;
+    text-align: center;
 }
 
 nav ul li a {
-    color: #ffffff;
+    display: block;
+    padding: 14px;
+    color: white;
     text-decoration: none;
-    font-size: 1em;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+.menu-btn, .close-btn {
+    display: none;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #333;
+        transition: right 0.3s;
+    }
+
+    #menu-toggle:checked + label + nav ul {
+        right: 0;
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+        border: none;
+        font-size: 18px;
+        z-index: 2;
+    }
+
+    .close-btn {
+        display: block;
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+        border: none;
+        font-size: 18px;
+        text-align: left;
+        margin: 10px;
+    }
+
+    nav ul li {
+        text-align: left;
+    }
+
+    nav ul li a {
+        padding: 10px 20px;
+    }
+}
+
+#menu-toggle:checked + .menu-btn {
+    display: none;
+}
+
+#menu-toggle:checked + .menu-btn + nav ul .close-btn {
+    display: block;
+}
+
+nav ul li a {
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
 }
 
 section {
