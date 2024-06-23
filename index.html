@@ -556,6 +556,36 @@
     </footer>
     </div>
   </div>
-    
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelectorAll('nav ul li a');
+    const nav = document.querySelector('nav ul');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+
+            const targetSection = document.querySelector(this.getAttribute('href'));
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                // Wait for the smooth scroll to finish before closing the menu
+                setTimeout(() => {
+                    menuToggle.checked = false;
+                }, 500); // Adjust the timeout duration as needed
+            }
+        });
+    });
+
+    // Optionally, close the menu when scrolling ends
+    window.addEventListener('scroll', function() {
+        if (menuToggle.checked) {
+            menuToggle.checked = false;
+        }
+    });
+});
+</script>
+
 </body>
 </html>
