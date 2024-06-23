@@ -60,8 +60,8 @@ nav ul li a {
     font-size: 1em;
 }
 
-/* Styles for small Android devices (max-width: 360px) */
-@media (max-width: 360px) {
+/* Styles for small devices (max-width: 576px) */
+@media (max-width: 576px) {
     nav ul {
         display: flex;
         flex-direction: column;
@@ -84,9 +84,9 @@ nav ul li a {
         color: #ffffff; /* Font color set to white */
         cursor: pointer;
         margin-bottom: 0.5em;
-        border: none; /* Remove border */
         padding: 0.2em 0.5em;
         border-radius: 5px;
+        border: none;
     }
 
     /* Show all menu items when checkbox is checked */
@@ -115,28 +115,11 @@ nav ul li a {
         padding: 0.5em 0;
         width: 100%;
     }
-
-    /* Hide menu when a link is clicked */
-    nav ul li a:target ~ #nav-toggle:checked ~ ul li {
-        display: none;
-    }
-
-    nav ul li a:target ~ #nav-toggle:checked ~ ul li:first-child {
-        display: block;
-    }
-
-    nav ul li a:target ~ #nav-toggle:checked ~ label {
-        display: block;
-    }
 }
 
 /* Extra styles for better visuals (optional) */
 nav ul {
     padding: 1em;
-}
-
-nav ul::before {
-    text-align: center;
 }
 
 
