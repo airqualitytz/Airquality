@@ -983,7 +983,7 @@ button:hover {
         font-size: 1.8em; /* Adjust based on your design */
     }
 
-    .description-text {
+    .description-text, .centered-text {
         font-size: 1.2em; /* Adjust based on your design */
     }
 }
@@ -1005,7 +1005,7 @@ button:hover {
         font-size: 1.6em; /* Adjust based on your design */
     }
 
-    .description-text {
+    .description-text, .centered-text {
         font-size: 1.1em; /* Adjust based on your design */
     }
 
@@ -1037,7 +1037,7 @@ button:hover {
         font-size: 1.4em; /* Adjust based on your design */
     }
 
-    .description-text {
+    .description-text, .centered-text {
         font-size: 1em; /* Adjust based on your design */
     }
 }
@@ -1055,7 +1055,21 @@ button:hover {
         font-size: 1.2em; /* Adjust based on your design */
     }
 
-    .description-text {
+    .description-text, .centered-text {
         font-size: 0.9em; /* Adjust based on your design */
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        font-size: 11px;
+    }
+
+    .title-text {
+        font-size: 1em; /* Adjust based on your design */
+    }
+
+    .description-text, .centered-text {
+        font-size: 0.8em; /* Adjust based on your design */
     }
 }
