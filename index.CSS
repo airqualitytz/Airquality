@@ -440,7 +440,7 @@ h2 {
 #projects h2 {
     font-size: 2.5em;
     margin-bottom: 30px;
-    color: #343a40;
+    color: #003366;
 }
 
 .project-gallery {
@@ -470,7 +470,7 @@ h2 {
     margin: 0;
     padding: 15px; /* Increased padding for better spacing */
     background-color: #fff;
-    color: #495057;
+    color: #003366;
     font-size: 1.1em; /* Slightly increased font size */
     text-align: left;
     transition: background-color 0.3s, color 0.3s;
@@ -478,7 +478,7 @@ h2 {
 
 .project p a {
     text-decoration: none;
-    color: #007bff;
+    color: #003366;
 }
 
 .project:hover {
@@ -490,7 +490,7 @@ h2 {
     content: "Click to see details";
     display: block;
     font-size: 0.9em; /* Slightly increased font size */
-    color: #6c757d;
+    color: #003366;
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -530,6 +530,11 @@ h2 {
     text-align: center;
     padding: 40px;
 }
+#team h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #003366;
+}
 
 .team-list {
     display: flex;
@@ -545,7 +550,7 @@ h2 {
     border-radius: 10px;
     overflow: hidden;
     background-color: #fff;
-    color: #000;
+    color: #003366;
     margin-bottom: 20px;
 }
 
@@ -601,7 +606,9 @@ h2 {
     padding: 2em 1em;
 }
 
+
 #articles h2 {
+    font-size: 2.5em;
     color: #003366;
     text-align: center;
     margin-bottom: 1em;
@@ -725,7 +732,7 @@ h2 {
 @keyframes blink {
     0%, 100% { box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
     50% { box-shadow: 0 0 20px rgba(0, 128, 0, 1); }
-    75% { box-shadow: 0 0 20px rgba(0, 0, 128, 1); }
+    75% { box-shadow: 0 0 20px rgb(1, 45, 58); }
 }
 
 /* Footer styles */
@@ -1217,7 +1224,7 @@ button:hover {
 #clients h2 {
     font-family: 'Arial', sans-serif;
     font-size: 2.5em;
-    color: #333;
+    color:#003366;
     margin-bottom: 30px;
 }
 
@@ -1285,7 +1292,7 @@ button:hover {
 #plants h2 {
     font-family: 'Arial', sans-serif;
     font-size: 2.5em;
-    color: #2c3e50;
+    color: #003366;
     margin-bottom: 30px;
 }
 
@@ -1329,6 +1336,7 @@ button:hover {
 .plant:hover {
     transform: translateY(-10px);
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
