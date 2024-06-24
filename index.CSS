@@ -7,7 +7,99 @@ body {
     color: #333333;
     padding-bottom: 100px; /* Adjust this value if needed */
 }
+/* News and Contact Section for Large Screens */
+#news-contact-section {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2000;
+    background-color: white;
+    color: black;
+    padding: 0.5em 0;
+    text-align: center;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: blink-animation 1s infinite alternate;
+}
 
+#news-contact-section a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+#news-contact-section a:hover {
+    color: #a4cc36;
+}
+
+#news-contact-section a:visited {
+    color: #006633;
+}
+
+#news-contact-section i {
+    margin-right: 5px;
+}
+
+@keyframes blink-animation {
+    from {
+        background-color: #f9f9f9;
+    }
+    to {
+        background-color: #e9e9e9;
+    }
+}
+
+/* News Icon for Small Screens */
+#news-icon {
+    display: none;
+    position: fixed;
+    bottom: 120px; /* Adjusted upward */
+    right: 10px;
+    z-index: 2000;
+    background-color: #a4cc36;
+    color: white;
+    padding: 15px; /* Made bigger */
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.5em; /* Made bigger */
+    animation: bounce 2s infinite;
+}
+
+#news-icon a {
+    color: white;
+    text-decoration: none;
+}
+
+#news-icon a:hover {
+    color: #333;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 768px) {
+    #news-contact-section {
+        display: none;
+    }
+
+    #news-icon {
+        display: block;
+    }
+}
 
 header {
     position: fixed;
@@ -27,18 +119,53 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 51, 102, 0.9); /* 80% opacity */
-    z-index: -1; /* Ensure the pseudo-element is behind the text */
-    pointer-events: none;
-    opacity: 1; /* Ensures the pseudo-element itself is fully visible */
+    background-color: rgba(0, 51, 102, 0.9); /* Blue color with 80% opacity */
+    z-index: -1;
+}
+
+header {
+    background-color: transparent; /* Make sure background color is transparent to show the image */
+    padding: 1em 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header .logo {
     display: inline-block;
     font-size: 1.5em;
     font-weight: bold;
+    color: #ffffff; /* Green color for logo */
+    margin-left: 1em;
 }
 
+
+.nav-container {
+    text-align: center;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #ffffff; /* Black color for nav links */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #006600; /* Green color on hover */
+}
+
+/* Media Queries */
 @media (max-width: 768px) and (orientation: portrait) {
     header {
         padding: 1em 0; /* Increased padding for small screens in portrait mode */
@@ -49,41 +176,6 @@ header .logo {
     header {
         padding: 0.5em 0; /* Reduced padding for small screens in landscape mode */
     }
-}
-
-
-.nav-container {
-    position: relative;
-    font-family: 'Arial', sans-serif;
-}
-
-nav {
-    color: white;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    flex: 1;
-    text-align: center;
-}
-
-nav ul li a {
-    display: block;
-    padding: 14px;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    background-color: #555;
 }
 
 .menu-btn, .close-btn {
