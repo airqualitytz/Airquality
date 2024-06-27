@@ -366,6 +366,59 @@ h2 {
 .slideshow {
     animation: slide 14s infinite;
 }
+/* Base styles */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.slide img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+/* Styles for small screens */
+@media only screen and (max-width: 600px) {
+    .slideshow-container {
+        height: 500px; /* Increase this value as needed */
+    }
+
+    .slide img {
+        height: 500px; /* Increase this value as needed */
+        object-fit: cover; /* Ensures the image covers the entire div */
+    }
+
+    .centered-text {
+        top: 60%; /* Adjust top position as needed */
+        transform: translate(-50%, -60%); /* Adjust translate as needed */
+    }
+
+    .title-text {
+        font-size: 24px; /* Adjust font size as needed */
+        padding: 10px; /* Add padding as needed */
+    }
+
+    .description-text {
+        font-size: 18px; /* Adjust font size as needed */
+        padding: 10px; /* Add padding as needed */
+    }
+
+    .welcome-description {
+        font-size: 18px; /* Adjust font size as needed */
+        padding: 20px;
+    }
+}
+
 
 .welcome-description {
     text-align: center;
