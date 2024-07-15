@@ -870,6 +870,10 @@ footer {
 .footer-bottom a:hover {
     text-decoration: underline;
 }
+.footer-column img {
+    width: 100px; /* Adjust the size of the logo */
+    margin-bottom: 10px; /* Space between the logo and the text */
+}
 
 /* About Section */
 #about {
